@@ -1,0 +1,18 @@
+{
+  "files": {
+    "ship.py": [
+      {
+        "id": "aff8258c-ade9-4116-842d-4048d8454ec3",
+        "line": 6,
+        "version": 4,
+        "index": 128
+      },
+      {
+        "id": "1f607ee0-d940-4b45-a92e-c40fc2cbdef0",
+        "line": 7,
+        "version": 4,
+        "index": 165
+      }
+    ]
+  }
+}
