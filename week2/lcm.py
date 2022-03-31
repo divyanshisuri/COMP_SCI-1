@@ -20,7 +20,7 @@ class LCM:
       
     else:
       max = self.num
-   while (True):
+    while (True):
       if (max % self.num1 == 0 and max % self.num2 == 0):
         break
       max = max + 1
@@ -28,14 +28,15 @@ class LCM:
     
 
 def run():
-	num = input("OOP or imperitive")
+	num = input("1:OOP or 2:mperitive")
 	try:
-		if num == 'i':
+		if num == '1':
 			print("The LCM of 48 and 24 is ", lcm(48,24))
-		elif num == 'o':
+		elif num == '2':
 			lcmoop = LCM(48,24)
 			print("The LCM of 48 and 24 is ", lcmloop())
 	except:
 		print("Pick a number choice please!")
+
 if __name__ == "__main__":
     run()
