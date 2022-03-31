@@ -1,19 +1,20 @@
-nterms = int(input("Term Number": "))
+def recur_fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return(recur_fibonacci(n-1) + recur_fibonacci(n-2))
 
-n1, n2 = 0, 1
-count = 0
+def tester():
+    try:
+        num = int(input("How many integers should this sequence be? "))
+        if num == 0:
+            print("Please enter a positive integer: ")
+        else:
+            print("Fibonacci Sequence: ")
+            for i in range(num):
+                print(recur_fibonacci(i))
+    except ValueError:
+        print("Invalid. Try again: ")
 
-if nterms <= 0:
-   raise Exception ("Try again with a positive number.")
-elif nterms == 1:
-   print("Fibonacci sequence upto",nterms,":")
-   print(n1)
-else:
-   print("Fibonacci sequence:")
-   while count < nterms:
-       print(n1)
-       nth = n1 + n2
-       # update values
-       n1 = n2
-       n2 = nth
-       count += 1
+if __name__ == "__main__":
+    tester()
