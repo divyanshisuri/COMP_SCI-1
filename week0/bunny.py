@@ -1,4 +1,3 @@
-One animation
 #bunny animation
 #prefuncy.py
 import time
