@@ -3,14 +3,14 @@ num=n
 rev=0
 
 while n>0:
- r=n%10
- rev=rev*10+r
- n//=10
+    r=n%10
+    rev=rev*10+r
+    n//=10
 print('Reverse of',num,'=',rev)
 if rev==num:
-  print(num,'is a palindrome number')
+    print(num,'is a palindrome number')
 else :
-  print(num,'is not a palindrome number')
+    print(num,'is not a palindrome number')
 #output
 Enter a number :132
 Reverse of 132 = 231
