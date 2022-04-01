@@ -5,6 +5,11 @@ class factorial:
       last = last * i
     return last
 factorial = factorial()
-numbee = input("Enter a number: ")
-numbee = int(numbee)
-print("Factorial: ",factorial(numbee))
+
+def tester():
+  numbee = input("Enter a number: ")
+  numbee = int(numbee)
+  print("Factorial: ",factorial(numbee))
+
+if __name__ == "__main__":
+  tester()
