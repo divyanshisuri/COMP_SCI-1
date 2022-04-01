@@ -1,52 +1,52 @@
-Family = []
+InfoDb = []
 # List with dictionary records placed in a list
-Family.append({
-               "Dad": "Amit",  
-               "Mom": "Karuna",  
-               "Children": ["Lakshay","Deven","Divyanshi "],
-               "Last Name": "Suri" , 
-               "Residence": "San Diego",
-               "Population":"4" 
-              })
-Family.append({
-              "Pets": "None",  
-              "Near_Parks": "Heritage Park",  
-              "DOBs": ["February 21", "April 18", "October 9 ", "October 26"],
-              "Cousins": ["Simran","Angel", "Aanya"],  
-              "Emails":["divyanshi.suri@gmail.com", "X", "X"]  
-              })
+InfoDb.append({
+    "FirstName": "Harry",
+    "LastName": "Potter",
+    "Grade": "11th",
+    "Classes":["Math","Science","PE","3d Animation", "English"]
+})
 
-print (Family)
+InfoDb.append({
+    "FirstName": "Hermione",
+    "LastName": "Granger",
+    "Grade": "12th",
+    "Classes":["PE","Language Arts","Math","Social Studies", "Science", "Art"]
+})
 
+def print_data(n):
+    print(InfoDb[n]["FirstName"], InfoDb[n]["LastName"])  # using comma puts space between values
+    print("\t", "Schedule: ", end="")  # \t is a tab indent, end="" make sure no return occurs
+    print(", ".join(InfoDb[n]["Classes"]))  # join allows printing a string list with separator
+    print()
 
-a = input("Enter key: " )
-b = input("Enter value: " )
+# Hack 2: InfoDB loops. Print values from the lists using three different ways: for, while, recursion
+## hack 2a: def for_loop()
+def for_loop():
+    for n in range(len(InfoDb)):
+        print_data(n)
+## hack 2b: def while_loop(0)
+def while_loop(n):
+    while n < len(InfoDb):
+        print_data(n)
+        n += 1
+    return
+## hack 2c : def recursive_loop(0)
+def recursive_loop(n):
+    if n < len(InfoDb):
+        print_data(n)
+        recursive_loop(n + 1)
+    return # exit condition
 
-def for_loop(key, value):
-  for data in Family:
-    if(data[key]) == value:
-      print(data[key])
-      return
-for_loop(a,b)
+def tester():
+    print_data(0)
+    print_data(1)
+    print("For loop")
+    for_loop()
+    print("While loop")
+    while_loop(0)  # requires initial index to start while
+    print("Recursive loop")
+    recursive_loop(0)  # requires initial index to start recursion
 
-def while_loop(key, value):
-  i = 0
-  while i < len(Family):
-    if (Family[i][key] == value):
-      print(Family[i][key])
-      return
-    i +=1
-while_loop(a,b)
-
-def recursive_loop(i, key, value):
-  if (i < len(Family)):
-    if (Family[i][key] == value):
-      print(Family[i][key])
-      return
-    i += 1
-    recursive_loop(i, key, value)
-  return
-recursive_loop(0,a,b)
-
-def driver():
-  
+if __name__ == "__main__":
+    tester()
